@@ -23,30 +23,14 @@ public class PlayControllerSpriter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (Input.GetKeyDown("a"))
-        // {
-        //     AtackAnimation();
-        // }
-        // if (Input.GetKeyDown("s"))
-        // {
-        //     BlockAnimation();
-        // }
-
-        var input = Input.inputString;
-        switch (input)
+        if (Input.GetKeyDown("a"))
         {
-            case "a":
-                AtackAnimation();
-                break;
-
-            case "s":
-                BlockAnimation();
-
-                break;
-                
-            default:
-                IdleAnimation();
-                break;
+            AtackAnimation();
         }
+        if (Input.GetKeyDown("s"))
+        {
+            BlockAnimation();
+        }
+
     }
 }
