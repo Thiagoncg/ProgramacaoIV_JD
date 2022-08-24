@@ -4,42 +4,35 @@ using UnityEngine;
 
 public class NewAnalogic : MonoBehaviour
 {
+
     private Touch touchDevice;
+    // Start is called before the first frame update
     void Start()
     {
-        //Toque na tela recebe um ID = Primeiro toque
         touchDevice = new Touch { fingerId = -1 };
     }
 
     void Update()
     {
-        //Se eu toquei na tela
-        if (Input.touchCount > 0)
+        if (Input.touchCount > 0) // Se for > que 0 teve um toque na tela
         {
-            //Contador de toques percorre o screen da tela
-            for (int i = 0; i < Input.touchCount; i++)
+            for (int i = 0; i < Input.touchCount; i++) // Armazena um vetor de toques na tela percorrendo todos os toques
             {
-                //contagem de toques percorrido pelo vetor
-                Debug.Log("Você clicou com :" + i + "dedos aqui");
+                Debug.Log("vc clicou aqui com : " + i + " dedos aqui !");
+                Debug.Log(("Valor do eixo x:" + Input.GetTouch(i).position.x)); // posição do click
+                Debug.Log(("Valor do eixo y:" + Input.GetTouch(i).position.y)); // posição do click
 
-                //Identifica cliques no eixo x e y
-                Debug.Log("Valor no eixo x:" + Input.GetTouch(i).position.x);
-                Debug.Log("Valor no eixo y:" + Input.GetTouch(i).position.y);
+                Debug.Log(Screen.width / 2); //Tamanho da terla / 2 no eixo x
+                Debug.Log(Screen.height / 2); // Tamanho da tela /2 no eixo y
 
-                Debug.Log("Tela dividido por 2 " + Screen.width / 2);
-                Debug.Log("Tela dividido por 2 " + Screen.height / 2);
-
-                if (Input.GetTouch(i).position.x < Screen.width / 2 && Input.GetTouch(i).position.y < Screen.height / 2)
-                {
-                    Debug.Log("Cl");
-                }
-                else
-                {
-                    
-                }
-
-
-
+                 if (Input.GetTouch(i).position.x < Screen.width / 2 && Input.GetTouch(i).position.y < Screen.height / 2)
+                 {
+                    Debug.Log("Vc clicou no Quadrante inferior esquerdo");
+                 }
+                 else
+                 {
+                    Debug.Log("Vc clicou fora do quadrante inferior esquerdo");
+                 }
 
             }
         }
