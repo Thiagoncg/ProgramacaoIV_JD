@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class Acelerometre : MonoBehaviour
 {
-    private float speed  = 10.0f;
+    
+    [SerializeField] private float speed  = 10.0f;
 
     void Update()
     {
-        //IntroductionAcer();
-        MoveObject();
+        IntroductionAcer();
+        //MoveObject();
     }
 
     private void IntroductionAcer()
     {
-        transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
-        Debug.Log(Input.acceleration.x);
-        Debug.Log(Input.acceleration.y);
-        Debug.Log(Input.acceleration.z);
-    }
+       transform.Translate(Input.acceleration.x, 0, -Input.acceleration.z);
+        Debug.Log("O valor de X é: " + Input.acceleration.x);
+        Debug.Log("O valor de Y é: " + Input.acceleration.y);
+        Debug.Log("O valor de Z é: " + Input.acceleration.z);
+    } 
 
     private void MoveObject()
     {

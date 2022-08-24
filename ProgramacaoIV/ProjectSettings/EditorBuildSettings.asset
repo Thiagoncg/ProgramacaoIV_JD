@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Analogico.unity
+    guid: 444b7e3c0acd8804b8ad400ff17c4ebc
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 5ea4421db9b04244ba93f9818a9dff79,
       type: 2}

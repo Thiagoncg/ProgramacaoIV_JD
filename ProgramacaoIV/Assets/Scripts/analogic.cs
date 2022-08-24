@@ -61,10 +61,9 @@ public class analogic : MonoBehaviour
                 }
             }
         }
-
-        if (touchDevice.fingerId == -1)
-        {
-            touchDevice.position = Vector2.MoveTowards(transform.position, startPos, 70);
-        }
+        // if (touchDevice.fingerId == -1)
+        // {
+        //     touchDevice.position = Vector2.MoveTowards(transform.position, startPos, 70);
+        // }
     }
 }
